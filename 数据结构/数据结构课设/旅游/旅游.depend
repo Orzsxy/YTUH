@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1585707046 source:c:\users\dell\desktop\数据结构课设\旅游\main.cpp
+	<iostream>
+	"sxy.h"
+
+1585707003 c:\users\dell\desktop\数据结构课设\旅游\sxy.h
+	<iostream>
+	<cstring>
+	<malloc.h>
+	<cstdio>
+
+1585707182 source:c:\users\dell\desktop\数据结构课设\旅游\sxy.cpp
+	<iostream>
+	<cstring>
+	<fstream>
+	<malloc.h>
+	<cstdio>
+	<sstream>
+	<vector>
+	<conio.h>
+	<cstdlib>
+	"sxy.h"
+
