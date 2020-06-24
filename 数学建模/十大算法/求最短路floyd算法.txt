@@ -1,0 +1,25 @@
+% Floyd 's Algorithm
+function [D,path]=floyd1(n)
+n=size(a,1);
+
+%设置D和path的初值。
+ D=a;path=zeros(n,n);
+for i=1:n
+    for j=1:n
+      if D(i,j)~=inf;
+         path(i,j)=j
+             end 
+                 end
+                    end
+
+%做n次迭代，每次迭代均更新D(i,j)和path(i,j)
+ for   k=1:n
+     for i=1:n
+        for j=1:n
+            if D(j,k)+D(k,j)<D(i,j)
+              D(i,j)=D(i,k)+D(k,j)
+                 path(i,j)=path(i,k)
+                end 
+            end
+         end
+     end

@@ -1,0 +1,38 @@
+functions=Newton(x,y,x0,nn)
+%Newton插值，x与y为已知的插值点及其函数值
+%x0为需要求的插值点的横坐标。nn为Newton差值多项式的次数，即nn次Newton
+%插值多项式
+nx=length(x);
+ny=length(y);
+if nx~=ny
+      warning(‘向量x与y的长度应该相同’)
+     return
+     end
+m=length(x0);
+%按照公式，对需要求的插值点x0的每个元素进行计算
+for i=1:m
+     t=0.0;
+     j=1;
+      yy=y;
+      kk=j;
+ %求差商
+  while(kk<=nn)
+  kk=kk+1;
+       for k=kk:nx
+        yy(k)=yy(k)-yy(kk-1)/(x(k)-x(kk-1);
+           end
+         end
+%求差商结果
+ t=yy(1);
+ for k=2:nn
+        u=1.0;
+        jj=1;
+      while(jj<k)
+        u=u*(x0(i)-x(jj));
+        jj=jj+1;
+         end
+         t=t+yy(k)*u;
+     end
+s(i)=t;
+end 
+return

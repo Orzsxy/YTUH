@@ -1,0 +1,40 @@
+gg=[[x1,x2,x3,x4,x5],zeros(1,m)];%矩阵gg,其中[x1,x2,x3,x4,x5]是已知数据,前面说到灰色理论只要四个数据以上就可以建模,所以这里用五个比较合理,zeros(1,m)中的m是你所想得到的预测数据的个数,由前面用于预测的已知数据是五个,所以m的值最好也在五个左右.在下面的语句中,实际操作的时候不要忘了把m替换成实际的数值.
+result=zeros(1,m);
+for j=1:m
+g0=gg(:,j:j+4);
+n=5;
+x0=g0;
+x1=zeros(n-1,1);
+x1(1)=x0(1);
+for i=2:n,
+    x1(i)=x1(i-1)+x0(i);
+end
+for k=1:n-1
+    z1(k)=(x1(k)+x1(k+1))/2;
+end
+z=zeros(1,n-1);
+for i=1:n-1
+    z(i)=-z1(i);
+end
+B=[z;ones(1,n-1)];
+B=B';
+y=zeros(n-1,1);
+for i=2:n
+    y(i-1)=x0(i);
+end
+u=inv(B'*B)*B'*y;
+a=u(1);
+b=u(2);
+for k=0:5,
+x2(k+1)=(x0(1)-b/a)*exp(-a*k)+b/a;
+end
+x3(1)=x0(1);
+for k=1:5,
+    x3(k+1)=x2(k+1)-x2(k);
+end
+g=x3;
+result(j)=g(n+1);
+gg(j+5)=g(n+1);
+end
+result;
+r=result' %r即为预测得到的数据
