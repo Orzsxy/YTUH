@@ -1,0 +1,41 @@
+>>51nod金牌训练营各期专题汇总
+
+1.贪心算法
+  训练题集：https://www.51nod.com/contest/problemList.html?contestId=54&randomCode=00000000000D78D1  
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=18
+  主  讲 人：毕ls，清华大学，NOI2012金
+
+2.动态规划
+  训练题集：https://www.51nod.com/contest/problemList.html?contestId=55&randomCode=914095  
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=19
+  主  讲 人：吴ls，清华大学，IOI2016金
+
+3.数据结构
+  训练题集：https://www.51nod.com/contest/problemList.html?contestId=58&randomCode=00000000000EF8DF  
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=20
+  主  讲 人：汪ls，清华大学，NOI2016金
+
+4.搜索
+  训练题集：https://www.51nod.com/contest/problemList.html?contestId=60&randomCode=D60565BFDDBD31F3
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=21
+  主 讲 人：吕ls，清华大学，NOI2016金
+
+5.字符串
+  训练题集：https://www.51nod.com/contest/problemList.html#!contestId=63&randomCode=E0F7FAA8F8539558
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=22
+  主 讲 人：翁ls，清华大学，NOI2016金
+
+6.数论
+  训练题集：https://www.51nod.com/contest/description.html#!contestId=64&randomCode=00000000000B1749
+  直播地址：https://www.51nod.com/live/liveDescription.html#!liveId=23
+  主 讲 人：吴ls，清华大学，IOI2016金
+
+7.图论（本期）
+
+8.计算几何（待发布）
+
+9.组合与计数（待发布）
+
+10.STL（待发布）
+
+注：以上地址链接请“粘贴”至浏览器中打开。
