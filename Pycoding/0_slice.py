@@ -15,3 +15,4 @@ print(myslice)
 s = 'i love i'
 s = s.split(' ')
 print(s)
+
