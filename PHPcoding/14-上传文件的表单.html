@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<form action="upload_file.php" method="post" enctype="multipart/form-data">
+	<!-- enctype 属性规定了在提交表单时数据的属性,一般为二进制类型:multipart/form-data-->
+    <label for="file">文件名：</label>
+    <br>
+    <input type="file" name="file" id="file"><br><!--type=file把输入作为文件来处理.允许用户上传文件有很大风险,应该设置相信的用户上传-->
+    <input type="submit" name="submit" value="提交">
+</form>
+
+</body>
+</html>
