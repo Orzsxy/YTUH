@@ -13,3 +13,16 @@ for i in range(4):
 else:
 	print('四名员工工资全部录入',salary)
 
+# for else的应用场景，
+#for循环结束的时机：循环中遇到break、for循环到结束
+#现在有for循环结束了，想知道最终是因为break，还是循环到结束，需要进一步分析，使用for else，就可以直接看出是在哪儿结束
+for n in range(2,10):
+	for x in range(2,n):
+		if(n%x==0):
+			break;
+	else:
+		print(n,"is a prime number")
+
+
+
+
