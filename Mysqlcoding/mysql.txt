@@ -21,6 +21,12 @@
 #                       VALUES
 #                       ( value1, value2,...valueN );
 
+# 增加字段：
+# ALTER TABLE student ADD age INT(4);
+
+
+
+
 # WHERE字句：
 # WHERE 可以运用于 DELETE 或者 UPDATE 命令
 # WHERE子句默认不区分大小，使用：BINARY 来区分字段的大小写
