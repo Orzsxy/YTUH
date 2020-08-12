@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         body {
+            color: rgb(199, 255, 192);
+            /* font: 12px/24px 'Microsoft YaHei'; */
+            font: 12px/1.5 'Microsoft YaHei'; /*12px/1.5 字体大小/行高(子元素文字大小的1.5倍)*/ /*会被继承，但是里面的内容要是也设置了font的大小字体 类型，这个设置就不会生效，因为继承被打破了*/
+        }
+        
+        /* 覆盖性 */
+            div {
+                color: red;
+                font-size: 20px; /*这个不会被覆盖，因为下面的没有设置size*/
+            }
+            /* p{  如果在这儿写p的属性，继承就被打破，只要设置了就会打破继承，最好写在下面
+                color: #000;
+            } */
+            div {
+                color: pink; /*覆盖性，有冲突时会就近选取*/
+            }
+            
+            /* 继承性 div中p没有设置颜色和大小，但是也继承了div属性*/
+            /* 没有的属性会继承，相同的会就近覆盖 */
+        </style>
+</head>
+<body>
+        <div>长江后浪推前浪,前浪死在沙滩上
+                <p>龙生龙，凤生凤，老鼠生的孩子会打洞</p>
+        </div>
+
+</body>
+</html>

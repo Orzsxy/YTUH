@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 1、下面是后代选择器  我想要把ol里面的小li选出来改为pink */
+        /* 后代选择器会选择所有的后代 */
+        ol li {
+            color: pink;
+        }
+        ol li a {
+            color: red;
+        }
+        .nav li a {
+            color: yellow;
+        }
+
+
+
+        /* <!--2、子选择器 > 只选择最近一代的标签  不递归生效 。下面代ul也是nav重名了，不过没有对应的a所以不影响 --> */
+         .nav >a {
+            color: red;
+        }
+
+
+
+        /* ， :2、并集选择器  也不会递归省生效。意思是 和 选择器，一个和另一个*/
+     /*把熊大和熊二改为绿色 */
+        /* div,
+        p {
+            color:rgb(192, 255, 211);
+        } */
+
+        /*请把熊大和熊二改为绿色 还有 小猪一家改为绿色 */
+        div,
+        ol,
+        .pig li {
+            color: rgb(192, 255, 211);
+        }
+
+        /* 约定的语法规范,我们并集选择器喜欢竖着写 一定要注意,最后一个选择器 不需要加逗号 */
+
+    </style>
+</head>
+<body>
+    <ol>
+        变态写法
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+    </ul>
+
+
+
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+
+
+
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+
+
+
+
+
+</body>
+</html>

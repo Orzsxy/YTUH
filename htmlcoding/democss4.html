@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- 常见的块元素(独占一行的) h1~h6 p div ul ol li   如果不设置的话默认是父级的宽度 -->
+        <!-- 文字类的元素不能使用块级元素，像 p h1~h6都是文字类的块元素，里面都不能放其他 块元素 -->
+
+        
+        <!-- 行内元素：a span b strong em del s ins u  -->
+        <!-- 行内元素的高、宽直接设置是无效的， 默认的是本身内容的宽度  -->
+        <!-- 行内元素只能放文本或其他行内元素 -->
+        <!-- 特殊情况：连接a 里面可以放块元素， a里面不能放a -->
+
+        <!-- 行内块元素：有行和块元素的特点 ， img td input -->
+        <!-- 和相邻的行内块元素在同一行，之间会有空隙，一行可以显示多个（行元素的特点） -->
+        <!-- 默认宽度是其内容的宽度（行元素的特点） -->
+        <!-- 高度、宽度 内外边距都可以设置（块级元素的特点） -->
+
+
+
+ 
+        <!-- 元素模式转换 -->
+        <!-- 行元素、块元素、行内块之间的转换 display: inline  block  inline-block  -->
+    <style>
+            a {
+                width: 150px;
+                height: 50px; /*转换了就可以设置宽度高度，因为是块元素*/
+              
+                color: blue;
+                background:pink;
+                display: block;
+            }
+            .di{
+                width: 150px;
+                height: 50px;   /*在设置这个就提示错误，因为是行元素，不能单独设置宽度和高度，下划线提示错误，*/
+                display: inline;
+                color: green; /*颜色可以设置*/
+                background-color: purple;
+            }
+            span{
+                display:inline-block;
+                width: 150px;
+                height: 150px; 
+                color: red;
+                background-color: skyblue;
+            }
+            .dii{
+                width: 200px;
+                height: 40px; /*盒子高度*/
+                background-color: pink;
+                line-height: 40px;  /*行高度*/
+                /* *盒子高度  行高度 相同才能单行文字居中 */
+            }
+    </style>
+</head>
+<body>
+       
+        <a href="https://www.bilibili.com">块元素a</a>
+        <a href="#">块元素a2</a>
+        <div class='di'>块div1转行元素</div>
+        <div class="di">块div1转行元素</div>
+
+        <span>行元素span转行内块</span>
+        <span>行元素span转行内块</span>
+        
+        <div class="dii">我要居中</div>
+</body>
+</html>

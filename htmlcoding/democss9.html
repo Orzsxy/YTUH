@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框的复合写法</title>
+    <style>
+            .one {
+                   width: 300px;
+                   height: 200px;
+                   /* border-width: 5px;
+                   border-style: solid;
+                   border-color: pink; */
+                   /* 边框的复合写法 简写:  */
+                   /* border: 5px solid pink; */  /*四条边都设置，属性没有顺序。*/  /*如果已经有了盒子大小(width heigh)，边框会影响盒子的大小 边框+里面的=最终的盒子大小，之前没有width，heigh就不会变大*/
+                   border: 1px solid blue;
+                   /* 层叠性 只是层叠了 上边 下边框 */
+                   border-top: 5px solid pink;
+                   /* 下边框 */
+                   border-bottom: 10px dashed purple;
+                     /* border: 5px solid pink; */  /*要是放在这儿就把上面的都覆盖了*/
+                    background-color: pink;
+                    
+                    
+                    
+                    
+                    /*内边距： padding 设置盒子和编剧的距离 */  /*如果已经有了盒子大小(width heigh)在设置内边距会扩大盒子 盒子+内编剧=最终盒子大小*/
+                    padding-left: 20px;
+                    padding-top: 30px;
+                     /* 内边距复合写法(简写) */
+                    /* padding: 5px; */  /*上下左右都是5*/
+                    /* padding: 5px 10px; */ /*上下是5  左右是10*/
+                    /* padding: 5px 10px 20px; */ /*上是5 左右是10 下是20*/
+                     /* padding: 5px 10px 20px; 30px*/ /*上是5 右是10 下是20  左30 顺时针计算*/
+
+               }
+               /* border-collapse 会合并相邻的边框。像在table的td中两边的 */
+
+
+               .two{
+                    /* margin-top: 20px; */
+                    /* margin: 30px; */
+                    margin: 30px 50px;  /*如果有参数缺少对应的位置和padding的一样*/
+                    background-color: green;
+               }
+               .three{
+                   /*1、让块级盒子水平居中：必须设定了width  盒子的左右外边距都设置为auto*/
+                   width: 300px;
+                   margin: 0  auto;
+                   background-color: red;
+               }
+               /* 2、让行内元素或者行内块元素水平居中需要给父元素添加 text-align:center  */
+                .he {
+                    width: 900px;
+                    height: 200px;
+                    background-color: pink;
+                    margin: 100px auto;
+                    text-align: center;
+                }
+           </style>
+       
+</head>
+<body>
+        <div class='one'> 1</div>
+        <div class='two'> 2</div>
+        <div class='three'> 2</div>
+        <div class="he"><span>里面的文字</span></div>
+            <div class="he"> <img src="down.jpg" alt=""> </div>
+</body>
+</html>

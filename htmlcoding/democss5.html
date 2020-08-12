@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+         body {
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            /* background-position: center top; */
+            background-position: center top;
+            
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+                background-image: url(images/logo.png);
+                /* background-repeat: no-repeat; */  /* 1.背景图片不平铺 */
+                /* background-repeat: repeat; */    /* 2.默认是平铺的 */
+                /* background-repeat: repeat-x; */   /* 3. 沿着x轴平铺 */
+                background-repeat: repeat-y;  /* 4. 沿着Y轴平铺 */
+                /* 页面元素既可以添加背景颜色也可以添加背景图片  背景图片会压住背景颜色 */
+
+                background-position:center 10px; /*方位名词 名词的先后顺序不影响结果。 如果一个参数,默认第二个是居中对齐；精确单位、或者和方位名词混合使用，第一个一定是x轴第二个是y轴，如果只指定x参数,默认第二个是垂直居中*/
+                background-attachment: scroll;/*fixed  背景图像随着滑动内容是否滚动*/
+                /* 简写形式：background：pink url(images/logo.png) repeat-y center 10px scroll;  而且顺序没有要求 */
+                background: rgba(255,255,255,0.3);  /*最后一个参数在0-1之间 数值越大越不透明 0.3还可以省略0 写成 .3  不影响里面的内容*/
+            }
+        </style>
+</head>
+<body>
+        <div></div>
+</body>
+</html>
