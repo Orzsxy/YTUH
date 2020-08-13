@@ -10,7 +10,7 @@ f.close()
 # with上下文管理器:不论什么原因跳出with块，都能确保文件关闭，执行完之后回到之前的现场
 s = ["张三\n",'李四','王五\n'] #列表可以被写入,\n被自动转为换行
 with open('E:\Pycoding\log.txt','a') as f:
-    f.writelines(s) #write()不能 写list
+    f.writelines(s) #write()不能 写list,但也是写入后换行
 
 #按照字节读取文件
 with open('E:\Pycoding\log.txt','r') as f:
